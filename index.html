@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Learning</title>
+</head>
+
+<body>
+    <script>
+        alert('hello world');
+        // JS is an untyped language
+        // in JS, there is not distinquist between integer and float, there is only number type
+        var a = 4 / 3;
+        console.log(a);// printing a float number
+        console.log(a.toFixed(0));// fixing format for float numbers,0 is equivalent an integer
+
+        // Integer
+        var b = a.toFixed(0);   // b is a string   var
+        b = parseInt(a);        // b is an integer var, method used to convert a float into an integer
+        console.log(typeof (b));// number
+
+        //Bit wises ops (need to remember case)
+        // >>> is Right Shift without sign bit(the 1st bit in signed num)- will change into 0, whereas 
+        // >> Right Shift with sign bit- will keep the value of this bit
+        var c = -1;
+        console.log(c >> 1);    // -1
+        console.log(c >>> 1);   // 2^31-1
+    </script>
+    <noscript>
+        <!-- just in case that user (browser) do not allow to run javascriipt -->
+        Sorry... Javascript is needed to go ahead
+    </noscript>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+1) Js has only Right shift with Zero >>>, but does not have the similar for Left (NO <<<)
+2) Js supports Miscellaneous Operator, Ex: result = (a > b) ? 100 : 200;
+3) Js have a special Operator is: typeof(var needDetectType);
+    Note: Undifined return (-->) "undefined", Null --> "object"
