@@ -2,3 +2,26 @@
 2) Js supports Miscellaneous Operator, Ex: result = (a > b) ? 100 : 200;
 3) Js have a special Operator is: typeof(var needDetectType);
     Note: Undifined return (-->) "undefined", Null --> "object"
+4) Js is untyped langquage. As a result, Js provide a special loop called: loop in
+    for (variablename in object){
+        statement or block to execute
+    } --> In each interaction, one property from object will assigned to variablename
+            and loop continues till all the properties are exhausted.
+5) delete is a key word (operator) to delete any property of a particular object
+    Syntax: delete obj.property OR delete obj['property'] AND will return boolean
+    Note: Have a lot of note need to aware
+    Plz read more on: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete
+6)  in Js, there is a term call symbol, read more in: https://developer.mozilla.org/en-US/docs/Glossary/Symbol
+7)  in Js, there is Loop controll using Loop label
+    Syntax: 'loopName :(colon)' --> should be in a seperated line of code lonely.
+    Note: You can use both break and continue for Loop label, Eg: break loopName OR continue loopName
+8)  in Js, we have a special way to define a function called: function constructor (using Function())
+    Syntax:   var anonymousFunc = Function ('x','y',"alert('Pucca'); return x*y");
+        OR    var literalFunc   = function (x, y){alert('Pucca'); return x*y;};//it's a literal function
+    Note:+  these functions created by that way are called anonymous functions
+         +  in 2 these ways, key words are different : 1st is Function (4 anonymous), 2nd is function (4 literal)
+         +  like normal functions,anonymous or literal func can be call by writing their name,Eg:literalFunc(1,2);
+         +  unlike normal functions, anonymousFuncs can not be access in front of where they are defined
+    Eg: normal functions: normalFunc(1,2); function normalFunc(x, y) {return x * y;};--> it's ok!!!
+        anonymous functions: literalFunc(1,2); var literalFunc= function (x, y){return x*y};--> it's an error
+9)  List of some predefined events are in: https://www.tutorialspoint.com/javascript/javascript_events.htm

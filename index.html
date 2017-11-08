@@ -28,6 +28,38 @@
         var c = -1;
         console.log(c >> 1);    // -1
         console.log(c >>> 1);   // 2^31-1
+
+        // Loop: for in
+        // printing the browser's Navigator object
+        for (var aProperty in navigator) {
+            // document.write(aProperty);
+            // document.write('<br>');
+        }
+
+        // Loop control by Labels
+        outerLoop:
+        for (var x = 0; x < 10; x++) {
+            innerLoop:
+            for (var y = 0; y < 10; y++) {
+                if (y == 2) {
+                    continue outerLoop;
+                    // screen will have only 10 * 
+                    // bc when y==1, it make the outerLoop move to next loop
+                }
+                document.write('*');
+                // stub for anonymousFunc
+                console.log(normalFunc(x, y));
+            }
+        }
+
+        // anonymous functions VS normal functions and literal functions
+        function normalFunc(x, y) {
+            return x * y;
+        };
+        var anonymousFunc = Function('x', 'y', 'return x*y;');
+        var literalFunc = function (x, y) {
+            return x * y;
+        };
     </script>
     <noscript>
         <!-- just in case that user (browser) do not allow to run javascriipt -->

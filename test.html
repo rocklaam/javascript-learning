@@ -1,0 +1,37 @@
+<html>
+
+<head>
+
+    <script type="text/javascript">
+        function handler(eventName) {
+            // create an new element
+            var para = document.createElement('p');
+            // it is the same with 1st way
+            para.innerText = eventName;
+            // access parent element
+            var parent = document.getElementsByTagName('body')[0];
+
+            // find the element need to replace
+            var need2Replace = document.getElementsByTagName('p')[1];
+
+            // replace the element
+            if (need2Replace === undefined) {
+                parent.appendChild(para);
+            } else {
+                parent.replaceChild(para, need2Replace);
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <p>Bring your mouse inside the division to see the result:</p>
+
+    <div onmouseover="handler('over')" onmouseout="handler('out')">
+        <h2> This is inside the division </h2>
+    </div>
+
+</body>
+
+</html>
