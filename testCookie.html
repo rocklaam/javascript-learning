@@ -1,0 +1,32 @@
+<html>
+
+<head>
+
+    <script type="text/javascript">
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            console.log(document.cookie);
+        }
+
+        function readCookie() {
+            document.write(document.cookie);
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <form name="myform" action="">
+        Enter name:
+        <input type="text" name="customer" />
+        <input type="button" value="Set Cookie" onclick="setCookie('name','alibaba',0);" />
+        <input type="button" value="Read Cookie" onclick="readCookie();" />
+    </form>
+
+</body>
+
+</html>

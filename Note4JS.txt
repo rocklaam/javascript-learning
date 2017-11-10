@@ -25,3 +25,9 @@
     Eg: normal functions: normalFunc(1,2); function normalFunc(x, y) {return x * y;};--> it's ok!!!
         anonymous functions: literalFunc(1,2); var literalFunc= function (x, y){return x*y};--> it's an error
 9)  List of some predefined events are in: https://www.tutorialspoint.com/javascript/javascript_events.htm
+10) Js_ document object has cookie not cookies.
+11) Js has 2 special functions are: escape(), and unescape()
+        escape('string') will 'encode' the string --> URI. Eg: 'this is Lam'--> 'this%20is%20Lam'
+        unescape('string') makes the opposite effect (decode)
+    Note: have to use escape() to store cookie because cookie do not contain space,' '
+12) Plz to read more about cookie in HTML(have 3 good functions):https://www.w3schools.com/js/js_cookies.asp
