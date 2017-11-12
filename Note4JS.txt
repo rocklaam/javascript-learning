@@ -37,3 +37,6 @@
     Note-> alert just show message to user, x=confirm('message') //boolean, when user click Cancel, x= false;
                               x=prompt('message','placeHolder')  //when user click OK, x= input of user
                                                                  //when user click Cancel, x=null
+15) in Js, when you want to assign to a variable undefined value, you must use : void(any expression, e.g: 1)--> void(1)
+    Note: there is not any other way to do this (assign undifined)
+16) in Js, there is a special function helping us to print quickly content of the website is: window.print();
