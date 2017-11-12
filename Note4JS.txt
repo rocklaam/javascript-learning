@@ -31,3 +31,9 @@
         unescape('string') makes the opposite effect (decode)
     Note: have to use escape() to store cookie because cookie do not contain space,' '
 12) Plz to read more about cookie in HTML(have 3 good functions):https://www.w3schools.com/js/js_cookies.asp
+13) Js has a function will delay another function in n (milisecond)
+    Syntax: setTimeout('Name of the function',timeDelay)--> the function is a way to call function normally
+14) Js has 3 functions: alert, confirm, and prompt
+    Note-> alert just show message to user, x=confirm('message') //boolean, when user click Cancel, x= false;
+                              x=prompt('message','placeHolder')  //when user click OK, x= input of user
+                                                                 //when user click Cancel, x=null

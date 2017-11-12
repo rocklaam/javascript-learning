@@ -21,6 +21,11 @@
                 parent.replaceChild(para, need2Replace);
             }
         }
+
+        function getValue() {
+            var retVal = prompt("Enter your name : ", "your name here");
+            document.write("You have entered : " + retVal);
+        }
     </script>
 
 </head>
@@ -30,6 +35,7 @@
 
     <div onmouseover="handler('over')" onmouseout="handler('out')">
         <h2> This is inside the division </h2>
+        <button onclick="getValue()">Click here!</button>
     </div>
 
 </body>
