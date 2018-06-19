@@ -10,6 +10,26 @@
     <script>
         alert('hello world');
 
+        // first lession about js from W3school        
+        var isBulbOn = false;
+        function changeBulbStatus() {
+            isBulbOn = !isBulbOn;
+            if (isBulbOn) {
+                turnOnBulb();
+            }
+            else {
+                turnOffBulb();
+            }
+        }
+
+        function turnOnBulb() {
+            document.getElementById('myImage').src = 'https://www.w3schools.com/js/pic_bulbon.gif'
+        }
+
+        function turnOffBulb() {
+            document.getElementById('myImage').src = 'https://www.w3schools.com/js/pic_bulboff.gif';
+        }
+
         // JS is an untyped language
         // in JS, there is not distinquist between integer and float, there is only number type
         var a = 4 / 3;
@@ -31,7 +51,7 @@
         // Loop: for in
         // printing the browser's Navigator object
         for (var aProperty in navigator) {
-            // document.write(aProperty);
+            document.write(aProperty);
             // document.write('<br>');
         }
 
@@ -68,27 +88,6 @@
     <button onclick="changeBulbStatus()">
         Turn On/ Off the bulb
     </button>
-    <script>
-        // first lession about js from W3school        
-        var isBulbOn = false;
-        function changeBulbStatus() {
-            isBulbOn = !isBulbOn;
-            if (isBulbOn) {
-                turnOnBulb();
-            }
-            else {
-                turnOffBulb();
-            }
-        }
-
-        function turnOnBulb() {
-            document.getElementById('myImage').src = 'https://www.w3schools.com/js/pic_bulbon.gif'
-        }
-
-        function turnOffBulb() {
-            document.getElementById('myImage').src = 'https://www.w3schools.com/js/pic_bulboff.gif';
-        }
-    </script>
 
     <noscript>
         <!-- just in case that user (browser) do not allow to run javascriipt -->
