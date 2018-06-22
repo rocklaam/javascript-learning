@@ -34,7 +34,7 @@ then html will show a welcome statement -->
         };
 
         // <summary> show the welcome statement from an input to a welcome place determined by id</summary>
-        showWelcomeForPressEnter = (idNameInput, idWelcomePlace) => {
+        showWelcomeForPressEnter = (idNameInput, idWelcomePlace, event) => {
             let keyCode = event.keyCode || event.which;
             if (isEnter(keyCode)) {
                 let name = getName(idNameInput);
@@ -47,7 +47,7 @@ then html will show a welcome statement -->
 <body>
     <div>
         <p>Submit your name</p>
-        <input id="name" type="text" onkeypress="showWelcomeForPressEnter('name','welcome')" />
+        <input id="name" type="text" onkeypress="showWelcomeForPressEnter('name','welcome',event)" />
         <button onclick=" showWelcomeForClickButton( 'name', 'welcome') ">Submit</button>
         <br>
         <p id="welcome"></p>

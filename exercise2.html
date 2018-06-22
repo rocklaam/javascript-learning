@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="exercise2.css">
+    <title>exercise 2- Click to Show or hide component</title>
+    <script>
+        const CLASS_NAME_OF_BRIEF_VIEW = 'BriefView';
+        const CLASS_NAME_OF_DETAILED_VIEW = 'DetailedView';
+
+        changeClassName = (idElement, oldClassName, newClassName) => {
+            document.getElementById(idElement).classList.add(newClassName);
+            document.getElementById(idElement).classList.remove(oldClassName);
+        };
+
+        showDetail = (idElement, idButton) => {
+            changeClassName(idElement, CLASS_NAME_OF_BRIEF_VIEW, CLASS_NAME_OF_DETAILED_VIEW);
+            document.getElementById(idButton).innerText = 'Hide Detail';
+        };
+
+        hideDetail = (idElement, idButton) => {
+            changeClassName(idElement, CLASS_NAME_OF_DETAILED_VIEW, CLASS_NAME_OF_BRIEF_VIEW);
+            document.getElementById(idButton).innerText = 'Show Detail';
+        }
+
+        changeDetail = (idElement, idButton) => {
+            if (document.getElementById(idElement).classList == CLASS_NAME_OF_DETAILED_VIEW) {
+                hideDetail(idElement, idButton);
+            } else {
+                showDetail(idElement, idButton);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="item1" class="BriefView">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac placerat purus. Sed rhoncus quam eu gravida bibendum. Suspendisse
+            pharetra cursus tellus, ac convallis mi hendrerit vitae. Curabitur elementum nisl quam, ac condimentum orci hendrerit
+            eu. Nullam rutrum faucibus mauris, ut aliquam augue pellentesque sit amet. Aenean sed felis accumsan, facilisis
+            lectus in, tempor leo. Duis eu sollicitudin ligula. Nunc odio erat, varius in augue ut, sodales rutrum nisl.
+            Aliquam arcu lacus, aliquet vitae mauris quis, blandit commodo lorem. Sed blandit scelerisque ipsum quis posuere.
+            Phasellus volutpat at metus vel gravida. Aenean non ex egestas, interdum ante sed, fermentum lectus. Nullam commodo
+            fermentum viverra. Morbi posuere commodo justo, quis mollis turpis interdum sed. Sed risus tortor, feugiat in
+            sagittis eget, malesuada finibus sapien. Suspendisse orci ipsum, posuere nec dapibus nec, dignissim in magna.
+            Ut interdum feugiat tortor, id dignissim enim. Proin rutrum augue ut justo dignissim bibendum. Nulla aliquam
+            vulputate mi et accumsan. Vestibulum malesuada non est sit amet pharetra. Quisque sodales vulputate dui, hendrerit
+            ultrices justo facilisis vitae. Duis non elementum velit. Cras convallis orci nec varius suscipit. Nulla pharetra
+            velit ac turpis vehicula tincidunt. Ut cursus dolor quis tempus pellentesque. In sagittis, ligula et placerat
+            hendrerit, risus odio sodales eros, id mattis elit magna eu neque. Vivamus et ligula condimentum enim vehicula
+            tincidunt. Quisque facilisis enim quis vulputate accumsan. In hac habitasse platea dictumst. Fusce augue risus,
+            porttitor ut sem nec, volutpat tincidunt risus. Nullam rutrum pretium magna, quis maximus arcu aliquam ut. Cras
+            cursus facilisis nunc at sagittis. Curabitur ac sem id magna lobortis pharetra. Nunc sed lectus nec velit suscipit
+            iaculis. Donec justo felis, ultrices eu fringilla in, finibus eu justo. Nam maximus suscipit rutrum. Duis vel
+            est neque. Maecenas imperdiet efficitur magna, ac elementum tortor. Duis ut purus libero. Integer ac augue at
+            odio ornare accumsan. In sit amet dignissim nunc. Vestibulum enim magna, feugiat vitae tempus sed, molestie vitae
+            elit. Morbi in lectus ut neque fringilla posuere. Mauris semper dui ut ex eleifend scelerisque. Proin nec fringilla
+            mi. Proin posuere ornare velit eu auctor. Curabitur at velit venenatis, faucibus odio vel, lacinia neque. Vestibulum
+            sagittis ligula erat, vitae tempus leo aliquet id. Vestibulum eget lorem suscipit, consectetur metus sit amet,
+            facilisis tortor. Etiam ullamcorper nibh quis posuere sodales. Sed tempus libero augue, ut congue dolor auctor
+            vitae.
+        </p>
+        <button id="btnShowUnShow1" onclick="changeDetail('item1','btnShowUnShow1')">
+            Show Detail
+        </button>
+    </div>
+
+    <div id="item2" class="BriefView">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac placerat purus. Sed rhoncus quam eu gravida bibendum. Suspendisse
+            pharetra cursus tellus, ac convallis mi hendrerit vitae. Curabitur elementum nisl quam, ac condimentum orci hendrerit
+            eu. Nullam rutrum faucibus mauris, ut aliquam augue pellentesque sit amet. Aenean sed felis accumsan, facilisis
+            lectus in, tempor leo. Duis eu sollicitudin ligula. Nunc odio erat, varius in augue ut, sodales rutrum nisl.
+            Aliquam arcu lacus, aliquet vitae mauris quis, blandit commodo lorem. Sed blandit scelerisque ipsum quis posuere.
+            Phasellus volutpat at metus vel gravida. Aenean non ex egestas, interdum ante sed, fermentum lectus. Nullam commodo
+            fermentum viverra. Morbi posuere commodo justo, quis mollis turpis interdum sed. Sed risus tortor, feugiat in
+            sagittis eget, malesuada finibus sapien. Suspendisse orci ipsum, posuere nec dapibus nec, dignissim in magna.
+            Ut interdum feugiat tortor, id dignissim enim. Proin rutrum augue ut justo dignissim bibendum. Nulla aliquam
+            vulputate mi et accumsan. Vestibulum malesuada non est sit amet pharetra. Quisque sodales vulputate dui, hendrerit
+            ultrices justo facilisis vitae. Duis non elementum velit. Cras convallis orci nec varius suscipit. Nulla pharetra
+            velit ac turpis vehicula tincidunt. Ut cursus dolor quis tempus pellentesque. In sagittis, ligula et placerat
+            hendrerit, risus odio sodales eros, id mattis elit magna eu neque. Vivamus et ligula condimentum enim vehicula
+            tincidunt. Quisque facilisis enim quis vulputate accumsan. In hac habitasse platea dictumst. Fusce augue risus,
+            porttitor ut sem nec, volutpat tincidunt risus. Nullam rutrum pretium magna, quis maximus arcu aliquam ut. Cras
+            cursus facilisis nunc at sagittis. Curabitur ac sem id magna lobortis pharetra. Nunc sed lectus nec velit suscipit
+            iaculis. Donec justo felis, ultrices eu fringilla in, finibus eu justo. Nam maximus suscipit rutrum. Duis vel
+            est neque. Maecenas imperdiet efficitur magna, ac elementum tortor. Duis ut purus libero. Integer ac augue at
+            odio ornare accumsan. In sit amet dignissim nunc. Vestibulum enim magna, feugiat vitae tempus sed, molestie vitae
+            elit. Morbi in lectus ut neque fringilla posuere. Mauris semper dui ut ex eleifend scelerisque. Proin nec fringilla
+            mi. Proin posuere ornare velit eu auctor. Curabitur at velit venenatis, faucibus odio vel, lacinia neque. Vestibulum
+            sagittis ligula erat, vitae tempus leo aliquet id. Vestibulum eget lorem suscipit, consectetur metus sit amet,
+            facilisis tortor. Etiam ullamcorper nibh quis posuere sodales. Sed tempus libero augue, ut congue dolor auctor
+            vitae.
+        </p>
+        <button id="btnShowUnShow2" onclick="changeDetail('item2','btnShowUnShow2')">
+            Show Detail
+        </button>
+    </div>
+
+    <div id="item3" class="BriefView">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac placerat purus. Sed rhoncus quam eu gravida bibendum. Suspendisse
+            pharetra cursus tellus, ac convallis mi hendrerit vitae. Curabitur elementum nisl quam, ac condimentum orci hendrerit
+            eu. Nullam rutrum faucibus mauris, ut aliquam augue pellentesque sit amet. Aenean sed felis accumsan, facilisis
+            lectus in, tempor leo. Duis eu sollicitudin ligula. Nunc odio erat, varius in augue ut, sodales rutrum nisl.
+            Aliquam arcu lacus, aliquet vitae mauris quis, blandit commodo lorem. Sed blandit scelerisque ipsum quis posuere.
+            Phasellus volutpat at metus vel gravida. Aenean non ex egestas, interdum ante sed, fermentum lectus. Nullam commodo
+            fermentum viverra. Morbi posuere commodo justo, quis mollis turpis interdum sed. Sed risus tortor, feugiat in
+            sagittis eget, malesuada finibus sapien. Suspendisse orci ipsum, posuere nec dapibus nec, dignissim in magna.
+            Ut interdum feugiat tortor, id dignissim enim. Proin rutrum augue ut justo dignissim bibendum. Nulla aliquam
+            vulputate mi et accumsan. Vestibulum malesuada non est sit amet pharetra. Quisque sodales vulputate dui, hendrerit
+            ultrices justo facilisis vitae. Duis non elementum velit. Cras convallis orci nec varius suscipit. Nulla pharetra
+            velit ac turpis vehicula tincidunt. Ut cursus dolor quis tempus pellentesque. In sagittis, ligula et placerat
+            hendrerit, risus odio sodales eros, id mattis elit magna eu neque. Vivamus et ligula condimentum enim vehicula
+            tincidunt. Quisque facilisis enim quis vulputate accumsan. In hac habitasse platea dictumst. Fusce augue risus,
+            porttitor ut sem nec, volutpat tincidunt risus. Nullam rutrum pretium magna, quis maximus arcu aliquam ut. Cras
+            cursus facilisis nunc at sagittis. Curabitur ac sem id magna lobortis pharetra. Nunc sed lectus nec velit suscipit
+            iaculis. Donec justo felis, ultrices eu fringilla in, finibus eu justo. Nam maximus suscipit rutrum. Duis vel
+            est neque. Maecenas imperdiet efficitur magna, ac elementum tortor. Duis ut purus libero. Integer ac augue at
+            odio ornare accumsan. In sit amet dignissim nunc. Vestibulum enim magna, feugiat vitae tempus sed, molestie vitae
+            elit. Morbi in lectus ut neque fringilla posuere. Mauris semper dui ut ex eleifend scelerisque. Proin nec fringilla
+            mi. Proin posuere ornare velit eu auctor. Curabitur at velit venenatis, faucibus odio vel, lacinia neque. Vestibulum
+            sagittis ligula erat, vitae tempus leo aliquet id. Vestibulum eget lorem suscipit, consectetur metus sit amet,
+            facilisis tortor. Etiam ullamcorper nibh quis posuere sodales. Sed tempus libero augue, ut congue dolor auctor
+            vitae.
+        </p>
+        <button id="btnShowUnShow3" onclick="changeDetail('item3','btnShowUnShow3')">
+            Show Detail
+        </button>
+    </div>
+</body>
+
+</html>
