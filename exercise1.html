@@ -1,0 +1,57 @@
+<!-- this excercise ask user's name and click a button,
+then html will show a welcome statement -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>excercise 1- welcome a name</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+        // <summary> welcome a "name" in a element determined by id.</summary>
+        welcomeName = (name, idElement) => {
+            document.getElementById(idElement).innerText =
+                `Welcome ${name}!`;
+        };
+
+        // <summary> detect a keyCode user pressed is Enter or not.</summary>
+        isEnter = (keyCode) => {
+            return keyCode == '13';
+        };
+
+        // <summary> get a "name" (value) from an element determined by id</summary>
+        getName = (idElement) => {
+            return document.getElementById(idElement).value;
+        };
+
+        // <summary> show the welcome statement from an input to a welcome place determined by id</summary>
+        showWelcomeForClickButton = (idNameInput, idWelcomePlace) => {
+            let name = getName(idNameInput);
+            welcomeName(name, idWelcomePlace);
+        };
+
+        // <summary> show the welcome statement from an input to a welcome place determined by id</summary>
+        showWelcomeForPressEnter = (idNameInput, idWelcomePlace) => {
+            let keyCode = event.keyCode || event.which;
+            if (isEnter(keyCode)) {
+                let name = getName(idNameInput);
+                welcomeName(name, idWelcomePlace);
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <div>
+        <p>Submit your name</p>
+        <input id="name" type="text" onkeypress="showWelcomeForPressEnter('name','welcome')" />
+        <button onclick=" showWelcomeForClickButton( 'name', 'welcome') ">Submit</button>
+        <br>
+        <p id="welcome"></p>
+    </div>
+</body>
+
+</html>
